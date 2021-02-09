@@ -3,7 +3,7 @@
 # Phase 1 - Build the application .jar file and name it builder
 FROM openjdk:11.0-jdk-slim as builder
 VOLUME /tmp
-COPY . .
+COPY . .chmod +x gradlew
 RUN ./gradlew build
 
 # Phase 2 - Build container with runtime only to use .jar file within
